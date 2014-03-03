@@ -1,4 +1,6 @@
 class StaticPagesController < ApplicationController
+  layout 'twitter'
+
   def welcome
   end
 
@@ -10,4 +12,6 @@ class StaticPagesController < ApplicationController
 
   def privacy
   end
+
+
 end

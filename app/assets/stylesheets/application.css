@@ -11,3 +11,12 @@
  *= require_self
  *= require_tree .
  */
+body {
+  background-image: url(http://images2.layoutsparks.com/1/99446/light-blue-plain-paper.jpg);
+}
+
+.well {
+  border: 1px solid #6fa3c4;
+  background-color: #fff;
+  box-shadow: none;
+}
