@@ -1,9 +1,9 @@
 Twitter::Application.routes.draw do
 
   devise_for :users
-  root "static_pages#twitter"
+  root "static_pages#welcome"
 
-  resources :tweets, only: [:create, :destroy, :show]
+  resources :tweets, only: [:create, :destroy]
   resources :users, only: [:index, :show]
 
   get "/about" => "static_pages#about", as: :about

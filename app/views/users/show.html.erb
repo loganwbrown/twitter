@@ -1,3 +1,13 @@
-<h1>My Tweets</h1>
+<h1>My Tweets </h1>
+<h4><%= current_user.email %></h4>
+<br>
 
 
+<div class="span9">
+  <div class="well sidebar-nav">
+    <% @tweets.each do |tweet| %><p>
+      <%= tweet.content %>
+    <% end %>
+
+  </div><!--/.well -->
+</div><!--/span-->
