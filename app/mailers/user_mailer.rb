@@ -1,9 +1,9 @@
 class UserMailer < ActionMailer::Base
+  layout 'mailer'
   default from: "no-reply@example.com"
 
-  def welcome_email(user)
+  def welcome(user)
     @user = user
-    @url = 'http://example.com/login'
     mail(to: @user.email, subject: 'Welcome to Twitter')
   end
 end

@@ -66,24 +66,13 @@
     </div>
 
     <div class="container-fluid">
-      <div class="row-fluid">
-        <div class="span3 offset1">
-          <div class="well sidebar-nav">
-            <%= form_for(@tweet) do |f| %>
-              <p><%= f.text_field (:content) %></p>
-              <div><%= f.submit("Tweet Now") %></div>
-            <% end %>
-
-          </div><!--/.well -->
-        </div><!--/span-->
-        <div class="span6 offset1 well">
+  
           
         <%= yield %>
            
-            <%= bootstrap_flash %>
+        <%= bootstrap_flash %>
           
-        </div>
-      </div><!--/row-->
+      
 
       <footer>
         <p>&copy; Company 2014</p>
