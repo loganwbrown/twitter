@@ -2,15 +2,18 @@ class TweetsController < ApplicationController
   def create
     @tweet = current_user.tweets.build(tweet_params)
     if @tweet.save
-      redirect_to user_path(current_user), success: "You have created a new tweet."
+      flash[:succes] = 'You have created a new tweet'
+      redirect_to user_path(current_user)
     else
-      redirect_to user_path(current_user), error: "Your tweet was not created."
+      flash[:error] = 'Your tweet was not created.'
+      redirect_to user_path(current_user)
     end
   end
 
   def destroy
     @tweet.destroy
-    redirect_to user_path(current_user), notice: "That tweet was removed"
+    flash[:notice] = 'That tweet was removed.'
+    redirect_to user_path(current_user)
   end
 
   def show
