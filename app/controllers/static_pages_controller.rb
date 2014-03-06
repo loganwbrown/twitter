@@ -15,5 +15,19 @@ class StaticPagesController < ApplicationController
   def privacy
   end
 
+  def newsletter
+    @newsletter = Newsletter.new
+    if request.post?
+      @newsletter.assign_attributes(newsletter_params)
+      @newsletter.save
+      redirect_to root_path, notice: 'thanks for signing up'
+    end
+  end
+
+  private
+
+  def newsletter_params
+    params.require(:newsletter).permit(:newsletter_email)
+  end
 
 end

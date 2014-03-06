@@ -1,0 +1,7 @@
+<h1 class="page-header">Sign Up for Our Newsletter</h1>
+
+<%= form_for(@newsletter, url: newsletter_path) do |f| %>
+  <%= f.text_field(:newsletter_email, placeholder: 'Email') %><br>
+  <%= f.submit('Sign Up', class: 'btn btn-success') %>
+
+<% end %>
